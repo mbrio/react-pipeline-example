@@ -8,7 +8,7 @@ import { Task } from 'react-pipeline';
 export default class Print extends Task {
   static propTypes = {
     stdout: React.PropTypes.object.isRequired,
-    message: React.PropTypes.object.isRequired
+    message: React.PropTypes.string.isRequired
   };
 
   /**
