@@ -2,6 +2,8 @@
 
 An example project for react-pipeline
 
+[![Build Status](https://api.travis-ci.org/mbrio/react-pipeline-example.svg?branch=master)](https://travis-ci.org/mbrio/react-pipeline-example)
+
 ## Introduction
 
 This is a very simple example application for react-pipeline that demonstrates
