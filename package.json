@@ -1,0 +1,99 @@
+{
+  "name": "react-pipeline-example",
+  "version": "0.1.0",
+  "description": "An example project for react-pipeline",
+  "main": "lib/index.js",
+  "scripts": {
+    "prebuild": "npm run lint",
+    "pretest": "npm run lint",
+    "test": "jest",
+    "doc": "esdoc -c .esdoc.json",
+    "build": "babel -d lib/ src/",
+    "prepublish": "npm run test && npm run build",
+    "clean": "rimraf lib coverage doc",
+    "prestart": "npm run build",
+    "start": "node lib/index",
+    "lint": "eslint src/*.js src/**/*.js spec/*.js spec/**/*.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "author": {
+    "name": "Michael Diolosa",
+    "email": "michael.diolosa@gmail.com",
+    "url": "http://twitter.com/mbrio"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "rules": {
+      "strict": 0
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageOnlyFrom": {
+      "<rootDir>/src/Print.js": true,
+      "<rootDir>/src/Wait.js": true,
+      "<rootDir>/src/index.js": true
+    },
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "preprocessCachingDisabled": true,
+    "testRunner": "<rootDir>/node_modules/jest-cli/src/testRunners/jasmine/jasmine2.js",
+    "testFileExtensions": [
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "testDirectoryName": "spec/unit",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/fbjs",
+      "<rootDir>/node_modules/babel-polyfill",
+      "<rootDir>/node_modules/babel-runtime",
+      "<rootDir>/node_modules/react-pipeline",
+      "<rootDir>/node_modules/core-js"
+    ],
+    "verbose": true
+  },
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mbrio/react-pipeline-example"
+  },
+  "keywords": [
+    "react",
+    "automation",
+    "pipeline"
+  ],
+  "dependencies": {
+    "babel-cli": "^6.6.0",
+    "babel-core": "^6.5.2",
+    "babel-eslint": "^5.0.0",
+    "babel-jest": "mbrio/babel-jest",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-runtime": "^6.6.1",
+    "esdoc": "^0.4.5",
+    "esdoc-es7-plugin": "0.0.3",
+    "eslint": "^2.2.0",
+    "eslint-plugin-react": "^4.1.0",
+    "jest-cli": "^0.9.0-fb3",
+    "react": "^0.14.7",
+    "react-pipeline": "^0.1.0",
+    "rimraf": "^2.5.2"
+  }
+}
