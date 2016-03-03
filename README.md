@@ -1,6 +1,6 @@
 # react-pipeline-example
 
-An example project for react-pipeline
+An example project for [react-pipeline](https://github.com/mbrio/react-pipeline)
 
 [![Build Status](https://api.travis-ci.org/mbrio/react-pipeline-example.svg?branch=master)](https://travis-ci.org/mbrio/react-pipeline-example)
 

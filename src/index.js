@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactPipeline, Pipeline } from 'react-pipeline';
+import ReactPipeline, { Pipeline } from 'react-pipeline';
 import Print from './Print';
 import Wait from './Wait';
 
