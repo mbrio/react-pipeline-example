@@ -1,6 +1,6 @@
 {
   "name": "react-pipeline-example",
-  "version": "0.1.0",
+  "version": "14.7.0",
   "description": "An example project for react-pipeline",
   "main": "lib/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "test": "jest",
     "doc": "esdoc -c .esdoc.json",
     "build": "babel -d lib/ src/",
-    "prepublish": "npm run test && npm run build",
+    "prepublish": "npm run build",
     "clean": "rimraf lib coverage doc",
     "prestart": "npm run build",
     "start": "node lib/index",
@@ -45,7 +45,6 @@
     },
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
     "preprocessCachingDisabled": true,
-    "testRunner": "<rootDir>/node_modules/jest-cli/src/testRunners/jasmine/jasmine2.js",
     "testFileExtensions": [
       "js"
     ],
@@ -55,7 +54,8 @@
     ],
     "testDirectoryName": "spec/unit",
     "testPathIgnorePatterns": [
-      "/node_modules/"
+      "/node_modules/",
+      "/node_modules/lib/"
     ],
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
@@ -64,7 +64,8 @@
       "<rootDir>/node_modules/babel-polyfill",
       "<rootDir>/node_modules/babel-runtime",
       "<rootDir>/node_modules/react-pipeline",
-      "<rootDir>/node_modules/core-js"
+      "<rootDir>/node_modules/core-js",
+      "<rootDir>/src"
     ],
     "verbose": true
   },
@@ -90,11 +91,11 @@
     "babel-runtime": "^6.6.1",
     "esdoc": "^0.4.5",
     "esdoc-es7-plugin": "0.0.3",
-    "eslint": "^2.2.0",
+    "eslint": "2.2.0",
     "eslint-plugin-react": "^4.1.0",
-    "jest-cli": "^0.9.0-fb3",
+    "jest-cli": "^0.9.0",
     "react": "^0.14.7",
-    "react-pipeline": "^0.2.0",
+    "react-pipeline": "^14.7.0",
     "rimraf": "^2.5.2"
   }
 }
