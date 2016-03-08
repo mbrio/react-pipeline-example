@@ -40,7 +40,11 @@
     "collectCoverage": true,
     "collectCoverageOnlyFrom": {
       "<rootDir>/src/Print.js": true,
-      "<rootDir>/src/Wait.js": true,
+      "<rootDir>/src/CountWords.js": true,
+      "<rootDir>/src/ObjectToJson.js": true,
+      "<rootDir>/src/TopNWords.js": true,
+      "<rootDir>/src/ReadFile.js": true,
+      "<rootDir>/src/WaterfallTask.js": true,
       "<rootDir>/src/index.js": true
     },
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",

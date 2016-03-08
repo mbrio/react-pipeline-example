@@ -6,11 +6,6 @@ import { Task } from 'react-pipeline';
  * @class
  */
 export default class Print extends Task {
-  static propTypes = {
-    stdout: React.PropTypes.object.isRequired,
-    message: React.PropTypes.string.isRequired
-  };
-
   /**
    * Prints a message to the supplied stdout.
    * @return {Promise} the promise associated with the async task.
