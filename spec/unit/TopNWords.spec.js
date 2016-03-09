@@ -1,12 +1,8 @@
 jest.dontMock('react-pipeline');
-jest.dontMock('path');
-jest.dontMock('fs');
 
 import React from 'react';
 
 const ReactPipeline = require('react-pipeline').default;
-const path = require('path');
-const fs = require('fs');
 const TopNWords = require('../../src/TopNWords').default;
 
 describe('TopNWords', () => {

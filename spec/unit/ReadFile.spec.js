@@ -26,10 +26,13 @@ describe('ReadFile', () => {
     it('should count words', done => {
       const p = path.join(__dirname, '..', 'fixtures', 'does-not-exist.txt');
       const onComplete = jest.genMockFunction();
-      
+
       ReactPipeline.start(<ReadFile path={p} onComplete={onComplete} />)
-      .then(() => { fail(); })
-      .catch(err => { done(); });
+      .then(() => {
+        fail();
+        done();
+      })
+      .catch(() => { done(); });
     });
   });
 });

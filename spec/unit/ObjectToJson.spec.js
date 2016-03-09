@@ -1,12 +1,8 @@
 jest.dontMock('react-pipeline');
-jest.dontMock('path');
-jest.dontMock('fs');
 
 import React from 'react';
 
 const ReactPipeline = require('react-pipeline').default;
-const path = require('path');
-const fs = require('fs');
 const ObjectToJson = require('../../src/ObjectToJson').default;
 
 describe('ObjectToJson', () => {
